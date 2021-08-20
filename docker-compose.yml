@@ -2,12 +2,14 @@ version: "3"
 
 services:
   web:
-    image: "lscheiner/myfirstapp:2.0"
+    image: "lscheiner/myfirstapp:3.0"
     networks:
       labdocker:
         ipv4_address: 172.20.0.2
     ports:
       - "80:80"
+    environment:
+       MESSAGE: VARIAVEL DE AMBIENTE 
 
   redis:
     image: redis
